@@ -1,0 +1,50 @@
+{未定义函数或变量 'DataCreatorParameterDemo'。
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('DemoDataCreator', 'D:\脑电\2020-2021\在线脑机接口平台框架V2.1平台框架示例代码\DemoOperation\DemoDataCreator.m', 19)" style="font-weight:bold">DemoDataCreator</a> (<a href="matlab: opentoline('D:\脑电\2020-2021\在线脑机接口平台框架V2.1平台框架示例代码\DemoOperation\DemoDataCreator.m',19,0)">line 19</a>)
+dataCreatorParameter = DataCreatorParameterDemo();
+} 
+DemoDataCreator
+{位置 2 处的索引无效。数组索引必须为正整数或逻辑值。
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('DataCreatorImplement/getData', 'D:\脑电\2020-2021\在线脑机接口平台框架V2.1平台框架示例代码\virtualAmplifier子系统\DataCreatorImplement\DataCreatorImplement.m', 107)" style="font-weight:bold">DataCreatorImplement/getData</a> (<a href="matlab: opentoline('D:\脑电\2020-2021\在线脑机接口平台框架V2.1平台框架示例代码\virtualAmplifier子系统\DataCreatorImplement\DataCreatorImplement.m',107,0)">line 107</a>)
+            data = templateData(:,firstPoint:firstPoint + dataLength - 1);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('DemoDataCreator', 'D:\脑电\2020-2021\在线脑机接口平台框架V2.1平台框架示例代码\DemoOperation\DemoDataCreator.m', 22)" style="font-weight:bold">DemoDataCreator</a> (<a href="matlab: opentoline('D:\脑电\2020-2021\在线脑机接口平台框架V2.1平台框架示例代码\DemoOperation\DemoDataCreator.m',22,0)">line 22</a>)
+data = dataCreatorInterface.getData(0,10)
+} 
+DemoDataCreator
+{位置 2 处的索引无效。数组索引必须为正整数或逻辑值。
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('DataCreatorImplement/getData', 'D:\脑电\2020-2021\在线脑机接口平台框架V2.1平台框架示例代码\virtualAmplifier子系统\DataCreatorImplement\DataCreatorImplement.m', 107)" style="font-weight:bold">DataCreatorImplement/getData</a> (<a href="matlab: opentoline('D:\脑电\2020-2021\在线脑机接口平台框架V2.1平台框架示例代码\virtualAmplifier子系统\DataCreatorImplement\DataCreatorImplement.m',107,0)">line 107</a>)
+            data = templateData(:,firstPoint:firstPoint + dataLength - 1);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('DemoDataCreator', 'D:\脑电\2020-2021\在线脑机接口平台框架V2.1平台框架示例代码\DemoOperation\DemoDataCreator.m', 22)" style="font-weight:bold">DemoDataCreator</a> (<a href="matlab: opentoline('D:\脑电\2020-2021\在线脑机接口平台框架V2.1平台框架示例代码\DemoOperation\DemoDataCreator.m',22,0)">line 22</a>)
+data = dataCreatorInterface.getData(0,8)
+} 
+DemoDataCreator
+{位置 2 处的索引无效。数组索引必须为正整数或逻辑值。
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('DataCreatorImplement/getData', 'D:\脑电\2020-2021\在线脑机接口平台框架V2.1平台框架示例代码\virtualAmplifier子系统\DataCreatorImplement\DataCreatorImplement.m', 107)" style="font-weight:bold">DataCreatorImplement/getData</a> (<a href="matlab: opentoline('D:\脑电\2020-2021\在线脑机接口平台框架V2.1平台框架示例代码\virtualAmplifier子系统\DataCreatorImplement\DataCreatorImplement.m',107,0)">line 107</a>)
+            data = templateData(:,firstPoint:firstPoint + dataLength - 1);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('DemoDataCreator', 'D:\脑电\2020-2021\在线脑机接口平台框架V2.1平台框架示例代码\DemoOperation\DemoDataCreator.m', 22)" style="font-weight:bold">DemoDataCreator</a> (<a href="matlab: opentoline('D:\脑电\2020-2021\在线脑机接口平台框架V2.1平台框架示例代码\DemoOperation\DemoDataCreator.m',22,0)">line 22</a>)
+data = dataCreatorInterface.getData(0,8)
+} 
+opentoline('D:\脑电\2020-2021\在线脑机接口平台框架V2.1平台框架示例代码\virtualAmplifier子系统\DataCreatorImplement\DataCreatorImplement.m',107,0)
+DemoDataCreator
+
+data =
+
+    0.4863    0.0757   -1.4129   -2.5105    0.9770    0.3139   -1.5398   -0.5337    0.6792    0.1522
+   -0.7414   -2.0122    0.9562    1.2887    1.1910    1.2686   -0.3981    3.6280    2.5991    3.3203
+   -2.4300    0.0020    1.6083    6.0677    3.0031    8.4578    4.9462    4.8155    5.0841    5.1194
+    1.6560    6.5576    4.5132   -2.3872   -1.3831   -5.7660   -2.5151   -4.0381   -2.1736   -2.1147
+   -1.0248   -7.5804   -4.0993    0.6913   -5.0929    1.6045    6.7395    5.2802    6.5885    6.3514
+    0.7880   -1.6707   -0.8250   -2.6375   -4.1644   -4.4968    0.3760   -0.7071    0.5590   -1.1845
+    0.0080    1.4771    0.0938    2.0264   -0.9497   -0.5528    1.2776   -2.7224   -3.9518   -3.1297
+   -0.7499    3.7139    2.9055    2.2681    2.6891    5.7068    4.4257    1.4699    2.7705    2.1733
+         0         0         0         0         0         0         0         0         0         0
+
+DemoDataCreator
+DemoDataCreator
+DemoOprationMain
