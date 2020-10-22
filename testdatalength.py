@@ -8,23 +8,8 @@ from scipy import signal
 import scipy.io
 import time
 
-duration = 500
-sample_rate = 250
-
-
-def dataconvert(input_data):
-    ch_1_data = int(input_data)
-    if ch_1_data > 0x7FFFFF:
-        ch_1_data = (~(ch_1_data) & 0x007FFFFF) + 1
-        real = float(ch_1_data * (-4.5) / 0x7FFFFF / 24)
-    else:
-        real = float(ch_1_data * 4.5 / 0x7FFFFF / 24)
-    return real
-
-
-b, a = signal.butter(10, 30, 'lowpass', fs=250)
 read = []
-serialPort = "COM5"  # 串口
+serialPort = "COM3"  # 串口
 baudRate = 115200  # 波特率
 ser = serial.Serial(serialPort, baudRate, timeout=0.5)
 N_channel = 2
@@ -42,26 +27,25 @@ def continuous_(ser):
             line = ser.readline()
             line = line.strip()
             if line != b'':
-                if line[0] == 35:
-                    break
+                break
 
         try:
             if str(line, encoding="utf-8") == '##########':
                 channel[8].append(1)
             read.append(line)
             # print(len(line))
-            if len(line) >= 13:
-                line = str(line, encoding="utf-8")
-                line = line[1:-1]
-                data = line.split(',')
-                # print(data)
-                for i in range(len(data)):
-                    # print(i)
-                    real = dataconvert(data[i])
-                    # print(real)
-                    channel[i].append(real)
-                    # print(len(channel[i]))
-                channel[8].append(0)
+            
+            line = str(line, encoding="utf-8")
+            # line = line[1:-1]
+            data = line.split(',')
+            # print(data)
+            for i in range(len(data)):
+                # print(i)
+                # real = dataconvert(data[i])
+                # print(real)
+                channel[i].append(data[i])
+                # print(len(channel[i]))
+            channel[8].append(0)
         except:
             None
 
