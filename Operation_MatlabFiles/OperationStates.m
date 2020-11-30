@@ -1,9 +1,8 @@
 classdef OperationStates
-    %OPERATIONSTATAS 此处显示有关此类的摘要
-    %   此处显示详细说明
+
     
     properties
-        %数据采集状态
+        %DateCollectin States
             %INIT;%initial
             %CTNS;%connectToNeuroScan
             %DCNS;%disconnectToNeuroScan;
@@ -13,7 +12,7 @@ classdef OperationStates
         
         
         
-        %基本控制状态
+        %Control states
             %INIT;%initial
             %STON;%startOperation
             %SPON;%stopOperation

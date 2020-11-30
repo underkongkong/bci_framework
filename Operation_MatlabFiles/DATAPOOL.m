@@ -13,7 +13,7 @@ classdef DATAPOOL
     methods
         %initial function to init the totalData
         function obj = initial(obj)
-            obj.totalData=zeros(9,10);
+            obj.totalData=[];
         end
         
         %clear all data

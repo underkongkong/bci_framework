@@ -9,15 +9,15 @@ cd(p1);
 addpath(genpath([pwd,'\..\..\']));
 
 
-%¿ªÊ¼¼ÇÂ¼ÈÕÖ¾
+%å¼€å§‹è®°å½•æ—¥å¿—
 diary('DemoDataCreatorLog.txt');
 diary on;
 
-%´´½¨Ò»¸öÓëDemoOperatorµÄÁ¬½ÓÆ÷£¬ÓÃÓÚ½ÓÊÕ·¢ËÍ¹ıÀ´µÄ×´Ì¬
+%åˆ›å»ºä¸€ä¸ªä¸DemoOperatorçš„è¿æ¥å™¨ï¼Œç”¨äºæ¥æ”¶å‘é€è¿‡æ¥çš„çŠ¶æ€
 
 
 
-%³õÊ¼»¯Êı¾İÉú³ÉÆ÷
+%åˆå§‹åŒ–æ•°æ®ç”Ÿæˆå™¨
 dataCreatorParameter = DataCreatorParameter();
 dataCreatorInterface = DataCreatorImplement();
 dataCreatorInterface.initial(dataCreatorParameter);

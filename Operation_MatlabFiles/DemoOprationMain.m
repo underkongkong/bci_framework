@@ -10,49 +10,33 @@ cd(p1);
 addpath(genpath([pwd,'\..\']));
 
 
-%record
+%Log
 diary('.\DemoOperationLog.txt');
 diary on;
 
-%init Operator
-OperationStates = OperationStates();
+%init Operator properties
+OperationStates = OperationStates(); 	%create OperationStates object
 
-timer=0;
+DATAPOOL= DATAPOOL();					%create DATAPOOL object
+DATAPOOL.initial();						%init Datapool
 
-%init Datapool
-DATAPOOL= DATAPOOL();
-DATAPOOL.initial();
+Operator = Operator();	%create an Operator object
+%initialize Operator
+Operator.operationState = OperationStates;  
+Operator.DATAPOOL=DATAPOOL;
 
-%create an Operator State Change reality
-OperatorStateChange = OperatorStateChange();
-
-%
-OperatorStateChange.operationState = OperationStates;
-OperatorStateChange.DATAPOOL=DATAPOOL;
-
-%operateExchangeMessageOperator.exchangeMessageManagement = exchangeMessageManagement;
-%operateExchangeMessageOperator.realTimeReader = realTimeReader;
-%operateExchangeMessageOperator.analysisController = analysisController;
-OperatorStateChange.doSTAR();
-
-while(OperatorStateChange.operationState.receiverState=='STAR')
-timer=timer+1;
-OperatorStateChange.doSTAR();
-pause(1)
-if(timer==10)
-    OperatorStateChange.doSTOP();
-end
-end
-
-OperatorStateChange.doSTON();
+Operator.doConn(); %connect to Raspberry Pi using TCPIP
+Operator.doSTAR(); %receive Data from Raspberry Pi and show data realtime
+Operator.doSTOP(); %stop the connection to Raspberry Pi
+Operator.doSTON(); %Data processor
 pause(2)
-OperatorStateChange.doSPON();
+Operator.doSPON(); %stop data processing 
 pause(2)
-OperatorStateChange.doCSAL();
+Operator.doCSAL();
 pause(2)
-OperatorStateChange.doCLRT();
+Operator.doCLRT();
 pause(2)
-OperatorStateChange.doEXIT();
+Operator.doEXIT();
 
 
 
